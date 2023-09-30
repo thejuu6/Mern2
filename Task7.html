@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task19</title>
+    <script>
+        function Reverse(){
+            var x=parseInt(document.getElementById("x").value);
+            var rev=0;
+            while(x>0){
+                rev=rev*10+x%10;
+                x=parseInt(x/10);
+            }
+            document.getElementById('result').textContent=rev.toString();
+        }
+    </script>
+    <style>
+        .transparent-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 150px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="transparent-box">
+            <h2>Reversing a Number</h2>
+        Enter Number : <input type="number" id="x"><br><br>
+        <button onclick="Reverse()">Submit</button><br><br>
+        Result : <span id="result"></span>
+        </div>
+    </center>
+</body>
+</html>
